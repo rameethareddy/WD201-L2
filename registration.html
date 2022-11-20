@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- <script src="./assets/index.js" defer></script> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background-color: #efefef;
+      }
+      .head {
+        margin-top: 1rem;
+      }
+      .form {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 150px;
+        font-family: "Anek Telugu", sans-serif;
+        font-weight: 600;
+        font-size: medium;
+        padding-top: 8px;
+        margin-bottom: 20px;
+        background: linear-gradient(45deg, #e56b6f, #6d597a);
+        border: none;
+        box-shadow: 1px 1px 1px #c7f9cc;
+        color: #c7f9cc;
+      }
+
+      .btn:focus,
+      .btn:hover {
+        transition: 0.5s;
+        transform: translate(0.25em, 0.2em);
+      }
+      *:focus {
+        outline: #a7b4c1 solid 0px;
+      }
+
+      body {
+        background-color: #efefef;
+        padding: 70px;
+        font-family: "Open Sans", "Arial", snas-serif;
+      }
+
+      .input-group {
+        display: block;
+        width: 441px;
+        max-width: 100%;
+        height: 82px;
+        border: 0;
+        background-color: #ffffff;
+        border-bottom-left-radius: 41px;
+        border-bottom-right-radius: 41px;
+        border-top-left-radius: 41px;
+        border-top-right-radius: 0;
+        box-shadow: 0 17px 40px 0 rgba(75, 128, 182, 0.07);
+        margin-bottom: 22px;
+        position: relative;
+        font-size: 17px;
+        color: #a7b4c1;
+        transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out,
+          box-shadow 0.1s ease-in-out;
+      }
+
+      .input-group:hover {
+        box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.077);
+      }
+
+      .input-group input {
+        position: absolute;
+        border: 0;
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0);
+        top: 0;
+        height: 65px;
+        width: 100%;
+        padding: 0 53px;
+        box-sizing: border-box;
+        z-index: 3;
+        display: block;
+        color: #1a6fc4;
+        font-size: 17px;
+        font-family: "Oxygen", sans-serif;
+        transition: top 0.1s ease-in-out;
+      }
+
+      .input-group input::placeholder {
+        color: rgba(0, 0, 0, 0);
+      }
+
+      .input-group input:focus,
+      .input-group input:not(:placeholder-shown) {
+        top: 17px;
+      }
+
+      .input-group label {
+        position: absolute;
+        border: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        padding: 0 53px;
+        box-sizing: border-box;
+        transition: all 0.1s ease-in-out;
+        cursor: text;
+      }
+
+      .input-group input:focus + label,
+      .input-group input:not(:placeholder-shown) + label {
+        bottom: 20px;
+        font-size: 13px;
+        opacity: 0.7;
+      }
+
+      .req-mark {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        right: 33px;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 22px;
+        color: #e0e0e0;
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        overflow: hidden;
+      }
+      table td,
+      table th {
+        border-top: 1px solid #ecf0f1;
+        padding: 10px;
+      }
+      table td {
+        border-left: 1px solid #ecf0f1;
+        border-right: 1px solid #ecf0f1;
+      }
+      table th {
+        background-color: #4ecdc4;
+      }
+      table tr:nth-of-type(even) td {
+        background-color: #d9f4f2;
+      }
+      table .total th {
+        background-color: white;
+      }
+      table .total td {
+        text-align: right;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 align="center" class="head">WD101 - Level 8</h1>
+    <div class="box">
+      <form class="form" id="form">
+        <h2 align="center">Registration Form</h2>
+        <br /><br /><br />
+        <div class="input-group">
+          <input
+            value=""
+            class="input"
+            type="text"
+            name="name"
+            id="name"
+            required="required"
+            placeholder="Your Name"
+            style="border: 0"
+          />
+          <label for="text-1542372332072">Your Name</label>
+          <div class="req-mark">!</div>
+        </div>
+        <div class="input-group">
+          <input
+            value=""
+            class="input"
+            type="email"
+            name="email"
+            id="email"
+            required="required"
+            placeholder="Your Email"
+            style="border: 0"
+          />
+          <label for="text-1542372332072">Your Email</label>
+          <div class="req-mark">!</div>
+        </div>
+        <div class="input-group">
+          <input
+            value=""
+            class="input"
+            type="password"
+            name="password"
+            id="password"
+            required="required"
+            placeholder="Your Email"
+            style="border: 0"
+          />
+          <label for="text-1542372332072">Your Password</label>
+          <div class="req-mark">!</div>
+        </div>
+        <div class="input-group">
+          <input
+            value=""
+            class="input"
+            type="date"
+            name="dob"
+            id="dob"
+            required="required"
+            placeholder="Your DOB"
+            style="border: 0 !important"
+          />
+          <label for="text-1542372332072">Your DOB</label>
+          <div class="req-mark">!</div>
+        </div>
+
+        <div>
+          <input type="checkbox" name="agree" id="agree" />
+          <label for="checkbox">Accept Terms & Conditions</label>
+        </div>
+        <br />
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <br />
+    <center>
+      <div class="entry">
+        <h2 class="subHead">Entries</h2>
+        <div id="tableDiv"></div>
+      </div>
+    </center>
+    <script>
+      let form = document.getElementById("form");
+      const retriveEntries = () => {
+        let entries = localStorage.getItem("userEntry");
+
+        if (entries) {
+          entries = JSON.parse(entries);
+        } else {
+          entries = [];
+        }
+        return entries;
+      };
+      let Entries = retriveEntries();
+
+      const displayEntries = () => {
+        const entries = retriveEntries();
+
+        const rows = entries
+          .map((entry) => {
+            const name = `<td class="td">${entry.name}</td>`;
+            const email = `<td class="td">${entry.email}</td>`;
+            const password = `<td class="td">${entry.password}</td>`;
+            const dob = `<td class="td">${entry.dob}</td>`;
+            const accseptConditions = `<td class="td">${entry.accseptConditions}</td>`;
+
+            const row = `<tr>${name} ${email} ${password} ${dob} ${accseptConditions}</tr>`;
+            return row;
+          })
+          .join("\n");
+
+        let tableDiv = document.getElementById("tableDiv");
+
+        // <th class="th">Name</th> inside oneMore head for name
+        tableDiv.innerHTML = `<table class="table" border="2">
+                              <tr>
+                                <th class="th">Name</th>
+                                <th class="th">Email</th>
+                                <th class="th">Password</th>
+                                <th class="th">Dob</th>
+                                <th class="th">Accepted terms?</th>
+                              </tr>
+                                ${rows}
+                              </table>`;
+      };
+
+      const saveUserFrom = (event) => {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("dob").value;
+        let accseptConditions = document.getElementById("agree").checked;
+
+        let entry_obj = {
+          name,
+          email,
+          password,
+          dob,
+          accseptConditions,
+        };
+
+        Entries.push(entry_obj);
+
+        localStorage.setItem("userEntry", JSON.stringify(Entries));
+
+        displayEntries();
+      };
+
+      form.addEventListener("submit", saveUserFrom);
+
+      displayEntries();
+
+      function getAge(today, birthDate) {
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+        }
+        return age;
+      }
+
+      let dateELE = document.getElementById("dob");
+
+      dateELE.addEventListener("change", () => {
+        let [year, month, date] = document
+          .getElementById("dob")
+          .value.split("-");
+
+        let dob = new Date(year, month, date);
+        let Today = new Date();
+
+        age = getAge(Today, dob);
+
+        if (age < 18 || age > 55) {
+          dateELE.setCustomValidity("Your age is not lies between 18 and 55");
+          return;
+        } else {
+          dateELE.setCustomValidity("");
+        }
+      });
+
+      const email = document.getElementById("email");
+
+      email.addEventListener("input", () => validate(email));
+
+      function validate(ele) {
+        if (ele.validity.typeMismatch) {
+          ele.setCustomValidity("The Email is not in the right format!!!");
+          ele.reportValidity();
+        } else {
+          ele.setCustomValidity("");
+        }
+      }
+    </script>
+  </body>
+</html>
